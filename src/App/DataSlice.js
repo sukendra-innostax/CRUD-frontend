@@ -31,6 +31,8 @@ export const DataSlice = createSlice({
     builder.addCase(deleteUserData.fulfilled,(state,action)=>{
       state.status="success";
       const filteredData=state.fetchedData.filter(item=>item._id!==action.payload)
+      state.fetchedData=filteredData
+      console.log(filteredData)
     });
     builder.addCase(updateUserData.fulfilled,(state,action)=>{
         state.status="success";

@@ -9,6 +9,8 @@ import UserFetchDataItem from "../UserFetchDataItem/UserFetchDataItem";
 const UserFetchDetails = () => {
   const dispatch = useDispatch();
   const userData = useSelector((state) => state.Data.fetchedData);
+  console.log("🚀 ~ UserFetchDetails ~ userData:", userData)
+  
   const setSppiner=useSelector((state)=>state.Data.setSppiner);
 
   useEffect(() => {

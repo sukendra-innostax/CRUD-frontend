@@ -1,5 +1,5 @@
 import { editing } from "../../App/DataSlice"
-import { deleteUserData,fetchUserData } from "../../App/User.actions"
+import { deleteUserData} from "../../App/User.actions"
 import {useDispatch } from "react-redux"
 import { Link } from "react-router-dom"
 
@@ -11,7 +11,6 @@ const UserFetchDataItem = ({data}) => {
 
     const onDeleteItem = (_id) => {
         dispatch(deleteUserData(_id))
-        dispatch(fetchUserData())
     }
     const onEditItem = (eachItem) => {
         dispatch(editing(eachItem))

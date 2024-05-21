@@ -34,7 +34,6 @@ export const fetchUserData = createAsyncThunk(
           body: JSON.stringify(data)
         };
         await fetch(url, options)
-        console.log(options.body)
       } catch (error) {
         throw new Error(error.message)
       }
